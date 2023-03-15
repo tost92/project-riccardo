@@ -1,0 +1,29 @@
+<mat-card>
+<div class="login">
+<form action="" [formGroup]="formLogin">
+
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Inserisci l'email</mat-label>
+        <input
+          type="email"
+          formControlName="email"
+          placeholder="Inserisci l'email"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Inserire password</mat-label>
+        <input type="password" formControlName="password" placeholder="Inserisci password">
+      </mat-form-field>
+    </div>
+
+  </div>
+</form>
+</div>
+</mat-card>
+
