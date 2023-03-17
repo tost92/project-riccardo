@@ -11,7 +11,10 @@ import {MatTableModule} from '@angular/material/table'
 import {MatIconModule} from '@angular/material/icon'
 import { NgModule } from '@angular/core';
 import {MatCardModule} from '@angular/material/card'
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [],
   imports: [
@@ -26,8 +29,12 @@ import {MatCardModule} from '@angular/material/card'
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
-
-
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatSidenavModule,
+    MatToolbarModule
 
   ],
   exports :[
@@ -37,12 +44,19 @@ import {MatCardModule} from '@angular/material/card'
     DialogModule,
     CdkAccordionModule,
     ObserversModule,
-    CdkTableModule,
     MatIconModule,
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatSidenavModule,
+    MatToolbarModule
+
+
 
   ]
 })

@@ -1,29 +1,60 @@
-<mat-card>
-<div class="login">
-<form action="" [formGroup]="formLogin">
+<mat-card class="loginCard">
+  <mat-card-header class="headerLogin">
+    <div class="image mb-3">
+      <a href="" target="blank">
+          <img src="../../../assets/image/logo-design-evolution.jpg" alt="...">
+      </a>
+      </div>
+    <mat-card-title><h1>Login</h1></mat-card-title>
 
-  <div class="row">
-    <div class="col">
-      <mat-form-field>
-        <mat-label>Inserisci l'email</mat-label>
-        <input
-          type="email"
-          formControlName="email"
-          placeholder="Inserisci l'email"
-        />
-      </mat-form-field>
+  </mat-card-header>
+  <mat-card-content>
+  <form action="" [formGroup]="formLogin">
+    <div class="row">
+      <div class="col">
+        <mat-form-field  appearance="outline" class="w-100">
+          <input
+           matInput
+            type="email"
+            formControlName="email"
+            placeholder="Inserisci l'email"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="w-100" color="primary" appearance="outline">
+          <input matInput
+            type="password"
+            formControlName="password"
+            placeholder="Inserisci password"
+            [type]="hide ? 'password' : 'text'"
+          />
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+      <mat-card-actions >
+        <button  mat-raised-button (click)="accessLogin()" >Accedi</button>
+      </mat-card-actions>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <mat-form-field>
-        <mat-label>Inserire password</mat-label>
-        <input type="password" formControlName="password" placeholder="Inserisci password">
-      </mat-form-field>
-    </div>
+  </form>
+  <mat-divider class="divider"> </mat-divider>
+</mat-card-content>
 
-  </div>
-</form>
-</div>
+ <mat-card-footer>
+
+  <mat-card-actions>
+    <button mat-raised-button >Registrati
+   </button>
+  </mat-card-actions>
+</mat-card-footer>
 </mat-card>
+
 
