@@ -1,12 +1,8 @@
 import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewChecked,
-  AfterViewInit,
   Component,
-  DoCheck,
-  OnDestroy,
+  EventEmitter,
   OnInit,
+  Output,
 } from '@angular/core';
 import {
   FormGroup,

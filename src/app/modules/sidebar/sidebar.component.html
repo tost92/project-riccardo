@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="content-header">
+  <!-- Sidebar -->
+
+  <nav class="sidebar" [ngStyle]="{'width':sidebarWidth}">
+    <header>
+      <div class="image">
+        <a href="" target="blank">
+            <img src="../../../assets/image/logo-design-evolution.jpg" alt="...">
+        </a>
+        </div>
+
+    </header>
+
+    <div class="menu-bar">
+
+      <div class="menu" *ngFor="let item of topbarUserList" [ngClass]="isSelected(item.itemMenu)? 'selectedIcon':'' ">
+        <a (click)=" item.itemMenu==userEnum.compress? openCloseSidebar():navigate(item.itemMenu)">
+          <mat-icon [fontIcon]="item.icon"></mat-icon>
+          <b *ngIf="sidebarOpen" class="text">{{item.description}}</b>
+        </a>
+      </div>
+      <div class="bottom-content"></div>
+
+    </div>
+  </nav>
+</div>
+

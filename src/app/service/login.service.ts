@@ -6,6 +6,8 @@ import { User } from '../models/user';
   providedIn: 'root',
 })
 export class LoginService {
+
+  verify:boolean = false;
   users: User[] = [
     {
       username: '',
@@ -14,21 +16,24 @@ export class LoginService {
     },
   ];
 
-  verify:boolean =false;
+
 
   constructor() {}
 
   loginUser(email: string, password:string):boolean {
 
-   let verify :boolean =false;;
+
     this.users.map((u) => {
       if (u.email == email && u.password == password) {
-        return verify = true;
+        return this.verify = true;
       } else {
-        return verify = false;
+        return this.verify = false;
       }
 
     })
-    return verify;
+    return this.verify;
   }
+
+
+  isLogged = (): boolean => (this.verify) ? true : false;
 }
